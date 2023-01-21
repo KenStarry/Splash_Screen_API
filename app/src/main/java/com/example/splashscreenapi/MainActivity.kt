@@ -11,6 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.compose.rememberNavController
+import com.example.splashscreenapi.navigation.NavGraph
 import com.example.splashscreenapi.ui.theme.SplashScreenAPITheme
 
 class MainActivity : ComponentActivity() {
@@ -33,11 +35,13 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    if (user != null) {
-                        MainScreen()
-                    } else {
-                        LoginScreen()
-                    }
+                    NavGraph(navHostController = rememberNavController())
+
+//                    if (user != null) {
+//                        MainScreen(rememberNavController())
+//                    } else {
+//                        LoginScreen()
+//                    }
                 }
             }
         }

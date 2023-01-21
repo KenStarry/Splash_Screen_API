@@ -7,9 +7,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import com.example.splashscreenapi.navigation.NavGraph
 
 @Composable
-fun MainScreen() {
+fun MainScreen(
+    navHostController: NavHostController
+) {
 
     Column(
         modifier = Modifier
