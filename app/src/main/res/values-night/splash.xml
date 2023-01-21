@@ -9,4 +9,5 @@
         <item name="postSplashScreenTheme">@style/Theme.SplashScreenAPI</item>
 
     </style>
+
 </resources>
