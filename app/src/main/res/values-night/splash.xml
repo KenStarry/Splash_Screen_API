@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  dark theme   -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">#ffffff</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/undraw_pic_profile_hi2s</item>
+        <item name="postSplashScreenTheme">@style/Theme.SplashScreenAPI</item>
+
+    </style>
+</resources>
