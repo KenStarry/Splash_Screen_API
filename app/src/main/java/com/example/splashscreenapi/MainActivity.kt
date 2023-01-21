@@ -14,6 +14,9 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.splashscreenapi.ui.theme.SplashScreenAPITheme
 
 class MainActivity : ComponentActivity() {
+
+    var user: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -21,12 +24,20 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             SplashScreenAPITheme {
+
+                val user = "Ken"
+
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainScreen()
+
+                    if (user != null) {
+                        MainScreen()
+                    } else {
+                        LoginScreen()
+                    }
                 }
             }
         }
